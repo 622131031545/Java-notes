@@ -1,0 +1,775 @@
+00---------------------------Java:Java is pgming language.
+----1995 Java was overtaken by Sun Microsystem 
+----Intial it was named as "Oak" and later renamed as "Java".
+----Introduced by James Gostling and team.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Used to develop
+1.Desktop Application
+2.Web Application
+3.Games
+4.Mobile Application
+5.Embeded System
+6.Robotics
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Features
+1.Simple:
+	syntaxes are inherited from C and C++.
+	Pointer concept is removed.
+2.Object Orianted Programming Langauage.
+3.Platform Independant:
+4.Portable:
+5.Architecture-neutral:Java is architecturally nutral as size of primitive data type is fixed for all platform.
+6.Robust:
+7.Secured:
+8.Distributed
+9.High Performance  
+10.Multithreaded:
+11.Dynamic   
+12.Interpreted	
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Template of java Program:
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Program Compilation and Execution
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+jdk,jvm,jre
+JDK: Java Development Kit
+JVM:Java Vertual Machine
+JRE: Java Runtime Environment
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Variable:
+1.Local Variable:declared/defined within functions.
+2.Instance Variable: declared/defined within class and outside the function
+3.Static Variable: declared/defined within class and outside the function with static keyword
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+OOP:Object Oriented Programming Language.
+          PL which focuses on data and function both.
+          Makes data secure
+          Programatically maps the object and relation between them
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+ Pillers of OOP
+1.Inheritance
+2.Polymorphism
+3.Abstraction
+4.Encapsulation
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Basics of OOP
+1.Object: real world entity which have some properties and behaviours. 
+               Object are the variables of type class.
+               Object is instance of a class.
+               Objects are the Physical Entity as they get memory.
+               Size of an object is depend on total no of data members and theire types.
+               Objects get memory on 'heap'.
+syntax:
+           classname objectname=new classname();
+
+2.Class: Class is template for object.
+              Class is blueprint of the object.
+              Class is user defined (Non-primitive) datatype.
+              Class is Logical Entity as they doesn't get memory.
+syntax:
+  class Classname{
+         properties------> instance variable/data members
+         behaviours-----> methods/member functions
+ }
+Eg:
+    class Student{
+       int rno;
+       float per;
+       int cNo;
+      void showDetails(){}
+    }
+    Student s;               's' is instance.
+    s=new Student();    's' is a object
+
+**In same pkg more than one classes with same name are not allowed.
+**In one source file we have multiple classes but only one public class.
+**Source file should be saved with the same name of public class.
+
+
+***this:this is keyword /pointer used to point/refer current calling object
+
+Constructor:
+  Sepcial member function having same name as class, used to intilise the data member and automatically called when the  objects are created.
+
+
+**Constructor dosn't return any value.
+**Constructors should be public compulsourly.
+** Defualt constructors are implicitly avialable in the class when the class dosn't have any parameterised constructor.
+** Defualt constructors should be added explicitly  when the class have parameterised constructor.
+**Parameterised constructors should be written explicitly.
+
+Constructor Types
+1.Defualt Constructor/no argument constructor.
+2. Parameterised Constructor
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Access Specifiers:Access specifiers gives the scope or availability or accessibilty of the data member/member function.
+1.defualt:dm/mf with defualt specifier can be accessed within a class other classes within same pkg.
+2.private:dm/mf with private specifier can be accessed within class only.
+3.protected: dm/mf with protected specifier can be accessed within child classe only.
+4.public:dm/mf with public specifier can be accessed anywhere in the project.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Static Keyword:
+1.variable: variables declared or defined with static keyword
+       static variables are used to refer common property for all objects
+       static variables  get the memory only once 
+       static variables  get the memory in class area
+       static variables  should be defined comulsourly.
+2.function/method:function defined with static keyword.
+       static functions are used to refer common behviour for all objects.
+       they are called without object of the class.
+       static functions access only static data member.  
+3.block: block defined with static keyword
+         excutes before the main method
+4.class: class defined with static keyword.
+
+**static variable and functions are accessed out side the class with the class name when they are public/defualt
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Encapsulation:Encapsulation is wrapping of data member and member function together by making 
+1.data memebr as private 
+2. member function as public.
+
+Encapsulation provides data security
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Inheritance:It is a mechanism where one object aquiers the properties and behaviours of another object.
+ 
+---Inheritance used to map the "is-a" relation between two objects
+--Inheritance provides code reusablity.
+--"extends"keyword is used to implement inheritance.
+--syntax
+    class ParentClass {
+}
+
+class ChildClass extend Parentclass{
+}
+--Types
+1.Single inheritance:one parent class have only one child class.
+2.Multilevel Inheritance:one parent class have only one child class and the child class act as parent for the other class.
+3.Hirarical Inheritance:one parent class have multiple child classes.
+4.Multiple Inheritance: One Child class have multiple parent classes.[not supported by java].
+5.Hybrid Inheritance: Combination of more than one type of inheritance.[not supported by java].
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Constructors in Inheritance
+** Child class responsiblity is to call parent class parameterised constructor through "super" keyword
+** Child class have the parametrised constructor and parent dosn't have it that time "defualt constructor is implicitly called.
+**If child and parent both don't have parametrised constructor that time "defualt constructor" of both are called implicitly.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Super Keyword:
+1.used to call parametrised constructor of base class from derived class.
+2.used to access parent's members having same name  as child.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Protected Access Specifier
+if the parent class is public then "protected" access specifier allows the members to get access within child class only and that child class should be 
+1.in the same class
+2.in the same source file
+3. in the same package
+4. diffrent package
+if the parent class is defualt then "protected" access specifier allows the members to get access within child class only and that child class should be 
+1.in the same class
+2.in the same source file
+3. in the same package
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Association:Relation between the two objects.
+is-a : --->inheritance
+has-a :--->Aggrigation
+
+syntax
+class StrongEntity1
+{
+   p1;
+   p2;
+   WeakEntity we;
+}
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Polymorphism: providing one thing in a multiple forms
+1.Compile Time Polymorphism/Static Binding/Early Binding
+               CTP is implemented by Function overloading concept
+Function Overloading: concept where one or more functions have same name but different argument list or type.
+** Constructors can be overloaded.
+**Static methods can be overloaded.
+**main methods can be overloaded.
+**final methods can be overloaded.
+
+2.Run Time Polymorphism/Dynamic Binding/Late Binding:
+
+    RTP is implemented by function overriding and inheritance.
+Function Overriding :one more functions have same name,same number of arguments and theire types.
+Dynamic Method dispatching: differentiate the calls of overrriden methods at the time of execution.
+**overriden  Methods with access specifier  
+1.acess specifiers of overriden methods should be same in parent and child.
+ 
+**constructors can not be overriden.
+**Static methods can be overriden.
+**main method can not be overriden.
+**final method  can not be overriden.
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Final :ristrict the changes in variable,method and classes.
+1. final variable: variables defined with final keyword. 
+    blank final variable:variables declared with final keyword.
+    blank final variable should be defined 
+        1.in constructor
+        2. in block
+    static final variable:variables defined with static and final keyword. 
+        
+2.method :method defined with final keyword
+              final methods cannot be overriden by child class.
+3.class:class defined with final keyword
+          final classes cannot be inherited
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Abstraction:It is aprocess of hiding internal implementation.
+1.Abstaract Class
+    Class defined with Abstarct keyword having one or more abstarct method.
+    Abstarct methods: 
+	Methods declared with abstact keyword.
+**It's child class responsibilty to implement abstarct method of the parent class.
+    Otherwise the child class also have to be defined with abstarct keyword.
+**Abstarct classes can not be instantiated as they are incomplete classes.
+**We can achive 0%-100% abstarction through abstarct class.
+**Abstarct class can have static methods but abstarct methods can not be static.
+**Abstarct class can have final methods but abstarct methods can not be final.
+**Abstarct class have static,final ,defualt,protected and public variables.
+2.Interface
+Blueprint for the class.
+All methods in the interface are by defualt abstarct.
+All data members/variables in the interface are by defualt final.
+Interfaces are implemented by classes.
+Interfaces ca not be instantiated.
+used to achive 100% abstarction.
+used to achive multiple inheritance.
+
+syntax:
+  interface interfacename{
+      variables and methods
+}
+
+**Interface data members and member functions are only defualt/public.
+** Interface data members can be static
+**From Java8 interface allows to define methods with defualt specifier
+**From Java9 interface allows to define methods with private specifier
+**From Java8 interface allows to define methods with static keyword
+**From Java9 interface allows to define methods with private specifier and static keyword
+**Interfaces dosn't have contructors.
+**Interface dosn't have main method
+**One interface can extend other interface
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Exception Handling:
+Error:Mistakes done by the programmer
+1.Syntax Error:
+2.Logical Error
+3.Compile Time Error
+4.RunTime Error
+5.Error
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Exception:An Exception is a unwanted  events that abnormally terminate the program.
+Exception is an event that distrupts the normal excecution flow of the program.
+Exception occures during excuting the program.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Exception Handling:
+It is a mechanism to handle runtime errors(Exception).
+It is techinacally solution to handle abnormal termination of the program.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Types Of Exception
+1.Checked Exception :directly inherits Exception class
+2.Unchecked Exception :directly not  inherits Exception class
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Handling Exception
+1.try
+2.catch
+3.finally
+4.throw
+5.throws
+
+
+syntax:
+  try{
+          //the line of code where the exception may occure
+  }
+   catch(Exception e)
+  {
+          exception handling code
+  }
+finally{
+      //  line of code  that complusourly get  executed
+}
+
+
+throw: usd to throw an exception explicitly
+syntax:
+     new ExceptionClass("parameter");
+
+eg:
+  throw   new FileNotFoundException("Excepted File is not found");
+** throw keyword is used within function only.
+** throw keyword can throw checked and unchecked exception
+**exceptions can be thrown conditionally.
+------------------------------------------------------------------------------------------------------------------------------------------------
+Throws: used to declare an exception.
+used to propagate the exception.
+
+
+syntax:
+      function signature throws ExceptionClass{
+}
+-----------------------------------------------------------------------------------------------------------------------------------------------
+Custom Exception:User defined exception  
+syntax:
+    class classname extends Exception{
+          constructor(){
+                 super();
+}
+}
+-----------------------------------------------------------------------------------------------------------------------------------------------
+Inner Classes/Nested Classes
+Syntax:
+    class outerclassname{
+        class innerclassname{
+            
+}     
+}
+Advandage/Why to use?
+1.to improve code readability
+2.if one of the class should not get accessed by other classes.
+Types of Inner Classes
+1.Member Inner Class:class defined within class
+        syntax:
+                 class outerclassname{
+        class innerclassname{
+            
+}     
+}
+Object creation
+        outerclass.innerclass obj=outerclassobject.new innerclass();
+2.Local Inner class  :class defined within function 
+syntax:
+          class outerclassname{
+
+               return type functionname(parameters )
+	{
+
+               	 class innerclassname{
+            
+	  }     
+	}
+           }
+3. Annonymus Inner Class :Inner class with no name
+    pointed by interface/abstract class refrence.
+
+4.Static Nested Class :a static class defined within another class
+
+class outerclassname{
+    static class innerclassname{
+            
+	  }     
+	
+}
+-----------------------------------------------------------------------------------------------------------------------------------------------
+String:
+Sequence of characters.
+It is an array of characters.
+In  java String is an object.
+Creating Strings: Strings are created by below classes
+1.String
+2.StringBuffer
+3.StringBuilder
+---------------------------------------------------------------------------------------------------------------------------------------------
+String: It creates immutable string.
+1.By literal way
+       syntax:
+              String obj="value";
+       eg:
+           String name="Amita";
+---gets the memory on scp
+--objects with same value will get memory onlty once.
+--Objects are not available for gc
+2.by new keyword
+        syntax:
+            String obj=new String("value");
+        eg:
+         String name=new String("Amita");
+---gets the memory on scp and heap
+--objects with same value will get memory every time on heap.
+--Objects are available for gc
+-----------------------------------------------------------------------------------------------------------------------------------------------
+String Comparision
+1.By ==   --->Compairs the refrences of string object.
+2.by equals()  ----->Compairs the value of string object.
+-----------------------------------------------------------------------------------------------------------------------------------------------
+String Concatination
+1.by +:
+2.by concat()
+-----------------------------------------------------------------------------------------------------------------------------------------------
+StringBuffer: Creats the mutable strings.objects are synchronised,It is threadsafe.introduced in java's 1.0v
+-----------------------------------------------------------------------------------------------------------------------------------------------
+StringBuilder:Creats the mutable strings.objects are non-synchronised,it is not a threadsafe.introduced in java's 1.5v
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+Data Structure: It is one of the way to organise the data.
+1.Stack :It is a datastructurethat works on first in last out alogorithem/manner.  
+              uses top pointer ,defualt value of top is -1
+ 
+2.Queue:It is a datastructure that works on first in first out alogorithem/manner.
+               uses front and rear pointer.
+               Front end: the end from where elements are removed/get
+               Rear end: the end from where elements are added.
+3.Linked List: List Of Linked nodes
+     Nodes:block of memotry two parts i.e data and address to the next node.
+Types of Linked List
+1.Singly Linked List
+2.Doubly Linked List
+3.Singly Circular Linked List
+2.Doubly Circular Linked List
+4.Tree :Nodes are arranged in tree structure
+5.Graph
+-------------------------------------------------------------------/////////---------------------------------------------------------------------
+
+Collection Framework:It is an architecture which provides the facility to manipulate the objects.
+It provides classes and interfaces for object manipluation.
+1.List Interface
+   a. allows duplication of element
+   b. insertion order is maintained
+  
+ 1.1ArrayList 
+        a.
+        b.
+        c.allows random access of elements
+        d. methods are non-synchronised
+        e. uses dynamic array as a DS.
+        f.as it uses array elements are palced at contigious memory location
+syntax:
+   ArrayList<datatype> obj=new ArrayList<>();
+2.LinkedList
+           a.
+           b.
+           c. Dosn't allow random access
+           d. methods are non-synchronised
+           e.uses doubly circular linked list as ds
+           f. elements are not palaced at contigious memory.
+3.Vector
+        a.
+        b.
+        c.allows random access of elements
+        d. methods are synchronised 
+        e. uses dynamic array as a DS.
+        f.as it uses array elements are palced at contigious memory location
+4.Stack
+     
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+Queue:
+1.PriorityQueue
+2.ArrayDeque
+---------------------------------------------------------------------------------------------------------------------------------------------
+Set:
+1.HashSet:
+    a. holds only unique elements.
+    b.allow only one null value
+    c. uses hashtable as ds
+    d.insertion order is not maintained
+    e.hashset is non-synchronised
+2.LinkedHashSet
+    a. holds only unique elements.
+    b.allow only one null value
+    c. uses hashtable  and linked list as ds
+    d.insertion order is  maintained
+    e.LinkedHashSet is non-synchronised
+3.TreeSet
+    a. holds only unique elements.
+    b.dosn't allow  null value.
+    c.uses balanced tree as ds.
+    d.insertion order is not  maintained
+    e.TreeSet is non-synchronised
+    f.elements are inserted by natural sorting order.
+-----------------------------------------------------------------------------------------------------------------------------------------------
+Sorting the collection:
+--Collections can be sorted with the help of "sort method" of Collection
+--For sorting two interfaces ar used by collection framework
+     1.Comparable:  
+ 	sort the lements depending on only one feild at a time.
+	have one abstract method compareTo()
+     2.Comparator:sort the lements depending on multiple feilds.
+              sort the elments depending on all  feild at a time.
+              have two abstarct methods.
+-----------------------------------------------------------------------------------------------------------------------------------------------
+MultiThreading
+MultiTasking: Performing multiple tasks at a time.
+    1.Proccess Based Multitasking(Multiprocessing):perfomrming/executing multiple processes(s/w) at a time.
+                    1.Each process get separate memeory area.
+                    2.Context switching is there between each process.
+                    3.Each process need separate resources.
+	  4.As Each process allocates a separate memory area,process are known as a heavyweighted
+                    5.As there a context switching ,multiprocessing takes time.
+    2.Thread Based Multitasking(MultiThreading).
+                 1.Each thread get common/shared memory area
+                 2.As threads shares the momory context swtiching is not there
+                 3.Minimum communication cost is there
+                 4. As threads sharesthe memory area,threads are known as a lighteweighted
+
+Thread: Smallest indivudual part of a process.
+             Lightweighted subprocess
+
+Creating Threads:
+1.By Extending Thread Class
+      1.run() :
+      2.start():
+      3.setName()
+      4.getName(()
+      5.setPriority()
+      6.getPriority()
+      7.getId()
+
+2.By Implementing Runnable  Interface
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+Synchronization:
+      ability to control resource sharing between threads.
+1.Mutual Exclusion : by Synchronize keyword 
+        1.Synchronized method
+        2.synchronized block
+        3.static synchroization
+
+      
+2.Interthread communication  : 
+It is a way synchronized threads communicate with each other to avoid deadlock situation.
+Synchronised threads works co-operatly.
+Co-operation: thread pauses its excution in critical section and releases the acquierd locks  so that another thread uses it.
+
+1.wait ():
+2.notify():
+3.notifyAll()
+-----------------------------------------------------------------------------------------------------------------------------------------------
+JDBC:Java Database Connectivity.
+   It is an API which provides collection of classes and interfaces which allows to communicate with database.
+
+API: Application Programmable Interface. :API is  a set of rules /protocol which allows to different softwares to communicate with each other.
+
+Driver: software componant that converts request coming from java program to protocol that database can understand.
+
+1.Type 1: JDBC-ODBC Bridge Driver.
+2.Type 2 : Native API Driver
+3.Type 3: Network Protocol Driver
+4.Type 4: Thin Driver
+
+----------------------------------------------------------------------------------------------------------------------------------------------
+Database connectivity steps 
+1.load/register the driver :Class's forName("com.mysql.jdbc.Driver")
+2.Establish the connection: getConnection("db path","username","password");
+3.Create Statement: createStatement();
+4.Execute the query: executeUpdate(),executeQuery()
+5.close the connection.close();
+
+Classes and interfaces in JDBC API
+1.DriverManager
+2.Connection 
+3.Statement interface:
+4.ResultSet interface:
+5.ResultSetMetaData interface:
+6.DatabaseMetaData interface :
+7.PreparedStatement interface
+8.CallableStatement Interface:
+
+------------------------------------------------------------------------------------------------------------------------------------------------Wrapper Classes:provides the facility to treat primitive type data as an object.
+ArrayList<int>
+1.int------->Integer
+2.float----->Float
+3.double--->Double
+4.char---->Character
+5.boolean---->Boolean
+6.short-------->Short
+7.byte------->Byte
+8.long------>Long
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
